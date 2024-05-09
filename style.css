@@ -30,7 +30,7 @@ nav{
     gap: 20px;
 }
 
-.nav-link{
+.nav-item .nav-link{
     font-weight: bold;
 }
 
@@ -103,6 +103,7 @@ nav{
     color: var(--couleur-principale);
     font-size: var(--taille-titre);
     text-align: center;
+    margin-top: 14px;
     margin-bottom: 20px;
     font-family: var(--police);
 }
@@ -141,7 +142,7 @@ nav{
     border-radius: 5px;
 }
 .contenu{
-  padding-top:50px ;
+  padding-top:30px ;
 }
 #statistique h2, #temoignage h2, #partenaire h2, #annonces h2{
     color: var(--couleur-blanche);
@@ -160,94 +161,130 @@ nav{
 }
 .statistique .section-sta{
     width: 150px;
-    height: 120px;
+    height: 150px;
     border: 1px solid #C4C4C4;
     color: var(--couleur-blanche);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .statistique .section-sta h3{
     margin-top: 20px;
 }
-#annonces{
-    height: 480px;
+#annonces {
+   margin-bottom: 30px;
+    margin-top: 20px;
 }
-.cartes{
-    margin: 50px;
-    margin-top: 70px;
-    margin-left: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+#annonces h2{
+    margin-bottom: 0;
 }
-.cartes .card{
-    width: 350px;
-    height: 200px;
-    background-color: #E9F3FE;
-}
-.cartes .card-body{
-    text-align: center;
-    margin-top: 80px;
+#annonces .contenu {
+    overflow: hidden; 
 }
 
-.cartes .card-title{
-    font-weight: bold;
+#annonces .cartes-scroll {
+    overflow-x: auto; /* Activation du défilement horizontal */
+    /* Pour que les cartes restent sur la même ligne */
 }
-.cartes .card-foot{
+
+#annonces .cartes {
+    margin-top: 40px;
+    margin-left: 50px;
+    display: inline-flex; /* Utilisation de flex en ligne */
+    align-items: center;
+    gap: 20px;
+    width: 2000px;
+}
+
+#annonces .cartes .card {
+    width: 498px;
+    height: 212px;
+    background-color: #E9F3FE;
+}
+
+#annonces .cartes .card-body {
+    text-align: center;
+    width: 457px;
+}
+
+#annonces .cartes .card-title {
+    font-weight: bold;
+    text-align: center;
+}
+#annonces .cartes p.card-text{
+    font-size: var(--taille-police);
+    text-align: center;
+}
+#annonces .cartes .card-foot {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.cartes .card-foot p{
+
+#annonces .cartes .card-foot p {
     font-size: 12px;
 }
-.cartes .card-foot p span{
+
+#annonces .cartes .card-foot p span {
     font-weight: bold;
 }
+
 #temoignage {
     height: 500px;
     margin: 50px;
-    margin-top: 0;
 
 }
 #temoignage h2, #partenaire h2, #annonces h2{
     color: var(--couleur-principale);
 }
-.row {
+#temoignage  .row {
     padding: 20px;
 }
-
-.card-title {
-   text-align: end;
-   margin-top: -80px;
+#temoignage  .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -17px;
+    margin-top: -17px;
+  
+}
+#temoignage .card-title {
    font-size: 16px;
    font-weight: 400;
    line-height: 30px;
    
 }
-.card-text{
+#temoignage .card-text{
     font-size: 13px;
     font-weight: 300;
   
 }
 #partenaire{
     height: 300px;
-    margin: 70px;
-    background-color: #D9D9D9;
-}
-#partenaire #carouselPartenaires{
-    display: flex;
-    justify-content: center;
+   
     text-align: center;
-  
 }
-.carousel-item{
-    gap: 50px;
+#partenaire .contenu{
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.carousel-item img{
-    height: 130px;
-    width: 130px;
-    margin: 15px;
+
+.partenaires {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+.partenaires img {
+    width: 150px;
+    margin: 30px;
+}
+
 footer{
     height: 400px;
     background-color: #F7F9FC;
@@ -263,18 +300,25 @@ footer{
     width: 320px;
     font-family: var(--police);
 }
+.newsletter .input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
 .newsletter input{
     width: 300px;
     height: 50px;
     border-radius: 100px;
     padding: 10px;
 }
-.newsletter .bouton a{
+.newsletter .input a{
     height: 50px;
     width: 150px;
+    margin-top: 20px;
    
 }
-.newsletter .bouton a button{
+.newsletter .input a button{
     color: var(--couleur-blanche);
     font-size: 14px;
     background-color: var(--couleur-principale);
@@ -288,13 +332,13 @@ footer .contenu1{
 }
 footer .contenu1 .droite{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: 30px;
     gap: 50px;
 }
 
-footer .nav-link{
+footer .nav-item .nav-link{
     font-weight: 300;
+    font-size: var(--taille-police);
 }
 .logo{
     width: 360px;
@@ -322,9 +366,11 @@ footer .nav-link{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 40px;
 }
 .app .link-app .bouton{
-    margin: 10px;
+    margin: 20px;
+    gap: 20px;
 }
 .app .link-app a{
     height: 50px;
@@ -344,11 +390,269 @@ footer .nav-link{
     border: 1px solid #C4C4C4;
 }
 #copyright{
-    height: 70px;
+    height: 50px;
     background-color: var(--couleur-principale);
 }
 
 #copyright .row p{
     text-align: center;
     color: var(--couleur-blanche);
+    margin-top: 1²  0px;
+}
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+.fixed-navbar-toggler {
+    position: fixed;
+    top: 15px; /* Ajustez la position verticale selon vos préférences */
+    right: 15px; /* Ajustez la position horizontale selon vos préférences */
+    z-index: 1000;
+}
+/*reponsivité tablette */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: var(--couleur-blanche);
+    position: fixed;
+    top: 56px; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    height: 320px;
+    
+}
+
+.navbar-nav {
+    width: 100%;
+   
+}
+
+.navbar-nav .nav-item {
+  
+    text-align: center; /* Centre les liens horizontalement */
+    margin-top: 10px; /* Ajoute un espacement entre les liens */
+}
+
+#banner {
+    background-position: center; /* Centrer l'image de fond */
+    justify-content: center; /* Centrer le contenu horizontalement */
+    display: flex;
+    justify-content: start; 
+    align-items: center; 
+   height: 550px;
+    margin-bottom: 0;
+    background-position: center;
+     /* background-size: contain; */
+}
+
+.banner {
+    margin-left: 0; /* Supprimer la marge à gauche */
+    text-align: center; /* Centrer le texte */
+}
+
+.notre-histoire .image {
+    display: none; /* Masquer l'image en mode tablette */
+}
+#statistique {
+    width: 88%; /* Ajuste la largeur à 100% */
+    margin-left: auto; /* Centre la section horizontalement */
+    margin-right: auto; /* Centre la section horizontalement */
+}
+.statistique{
+    margin-left: 0;
+    margin-right: 0;
+}
+.statistique .section-sta {
+    width: 150px; /* Réduit la largeur */
+    height: 100px; /* Réduit la hauteur */
+    margin: 10px; /* Ajuste les marges */
+}
+.statistique .section-sta  h3{
+    font-size: 18px;
+}
+.statistique .section-sta p {
+    font-size: 14px; /* Réduit la taille de la police */
+}
+
+
+
+.cartes .card {
+    width: 450px;
+    height: 300px; /* Ajuste la hauteur des cartes */
+    margin: 0 5px; /* Ajoute un espacement entre les cartes */
+}
+
+.cartes .card-body {
+    margin-top: 20px; /* Ajuste la marge en haut */
+}
+
+.cartes .card-title {
+    text-align: center;
+    margin-top: 0;
+    font-size: 16px; /* Diminue la taille de la police */
+}
+
+.cartes .card-foot p {
+    font-size: 10px; /* Diminue la taille de la police */
+}
+.row.row-cols-1.row-cols-md-4.g-4 .col {
+    flex: 0 0 50%; /* Les cartes se superposent deux à deux */
+    max-width: 50%; /* Limite la largeur à 50% */
+    margin-bottom: 20px; /* Ajoute un espacement entre les cartes */
+}
+#partenaire{
+    margin-top: 30%;
+    margin-bottom: 0;
+}
+
+footer{
+    height: 650px;
+}
+footer .contenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    gap: 0;
+}
+.newsletter .message {
+    width: 250px;
+    font-size: 12px;
+}
+.newsletter input {
+    width: 200px;
+    height: 40px;
+    font-size: 12px;
+}
+.newsletter .input a button {
+    font-size: 12px;
+}
+footer .contenu1{
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+     justify-content: space-around;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.logo h2 {
+    font-size: 14px;
+    width: 150px;
+}
+.logo p {
+    font-size: 10px;
+}
+footer ul{
+    gap: 0;
+}
+}
+
+
+
+@media (max-width: 767px){
+    
+    .banner{
+        color: var(--couleur-blanche);
+        margin-left: 50px;
+        text-align: center;
+    }
+.banner h1{
+    font-size: 30px;
+    
+}
+.banner p{
+    font-size: 18px;
+}
+.notre-histoire .texte h2
+{
+    font-size: 18px;
+}
+.notre-histoire .texte{
+    width: 300px;
+    height: 445px;
+}
+.notre-histoire .texte p{
+    font-size: 14px;
+    height: 580px;
+    width: 260px;
+    margin-left: 5px;
+}
+#statistique{
+    margin-top: -56px;
+    height: 650px;
+}
+.statistique {
+   
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+  }
+  .section-sta {
+    flex: 0 0 50%; /* Les éléments se superposent deux à deux */
+    max-width: 50%; /* Limite la largeur à 50% */
+    margin-bottom: 20px; /* Ajoute un espacement entre les éléments */
+    text-align: center; /* Centre le contenu horizontalement */
+  }
+  #annonces {
+    height: auto; /* Ajuste la hauteur automatiquement */
+    padding: 20px; /* Ajoute un padding pour l'espacement */
+}
+
+#annonces .cartes {
+    margin: 0; /* Supprime les marges */
+    margin-top: 20px; /* Ajoute un espace en haut */
+    display: flex; /* Utilise flexbox pour aligner les cartes */
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
+    justify-content: center; /* Centre les cartes horizontalement */
+    gap: 20px; /* Ajoute un espacement entre les cartes */
+}
+#annonces
+.cartes .card {
+    width: calc(50% - 20px); /* Ajuste la largeur des cartes pour deux par ligne */
+    max-width: none; /* Réinitialise la largeur maximale */
+    height: 350px;
+}
+.cartes .card-body {
+    margin-top: 10px; /* Ajuste la marge en haut */
+}
+
+.cartes .card-title {
+    text-align: center;
+    margin-top: 0;
+    font-size: 16px; /* Diminue la taille de la police */
+}
+
+.cartes .card-foot p {
+    font-size: 10px; /* Diminue la taille de la police */
+}
+.row.row-cols-1.row-cols-md-4.g-4 .col {
+    flex: 0 0 100%; /* Les cartes occupent toute la largeur en mode mobile */
+    max-width: 100%; /* Limite la largeur à 100% */
+    margin-bottom: 20px; /* Ajoute un espacement entre les cartes */
+}
+#temoignage{
+    margin-bottom: 50%;
+}
+#partenaire{
+    margin-top: 50%;
+}
+.carousel-item img {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
 }

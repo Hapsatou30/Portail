@@ -160,6 +160,7 @@ nav{
     
 }
 .statistique .section-sta{
+    max-width: 100%;
     width: 150px;
     height: 150px;
     border: 1px solid #C4C4C4;
@@ -332,6 +333,8 @@ footer .contenu1{
 }
 footer .contenu1 .droite{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 30px;
     gap: 50px;
 }
@@ -410,7 +413,7 @@ footer .nav-item .nav-link{
     z-index: 1000;
 }
 /*reponsivité tablette */
-@media (max-width: 991px) {
+@media (max-width: 991px)  {
   .navbar-collapse {
     background-color: var(--couleur-blanche);
     position: fixed;
@@ -563,19 +566,26 @@ footer ul{
 
 
 
-@media (max-width: 767px){
-    
-    .banner{
-        color: var(--couleur-blanche);
-        margin-left: 50px;
-        text-align: center;
+@media  (max-width: 767px){
+    #banner {
+       height: 245px;
+       background-position: center; /* Centrer l'image de fond */
+       justify-content: center; /* Centrer le contenu horizontalement */
+       display: flex;
+       align-items: center; 
     }
+.banner{
+    margin-top: 150px;
+    margin-left: 0;
+    text-align: left;
+}
 .banner h1{
-    font-size: 30px;
+    font-size:24px;
     
 }
 .banner p{
     font-size: 18px;
+    width: 220px;
 }
 .notre-histoire .texte h2
 {
@@ -583,59 +593,46 @@ footer ul{
 }
 .notre-histoire .texte{
     width: 300px;
-    height: 445px;
+    height: 455px;
 }
 .notre-histoire .texte p{
     font-size: 14px;
-    height: 580px;
+    text-align: justify;
     width: 260px;
-    margin-left: 5px;
+    margin-left: 15px;
+}
+.notre-histoire .texte a button{
+    font-size: 16px;
+}
+#statistique h2, #temoignage h2, #partenaire h2, #annonces h2{
+    font-size: 18px;
 }
 #statistique{
-    margin-top: -56px;
+    margin-top: -53px;
     height: 650px;
 }
 .statistique {
-   
     display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
-    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .section-sta {
-    flex: 0 0 50%; /* Les éléments se superposent deux à deux */
-    max-width: 50%; /* Limite la largeur à 50% */
-    margin-bottom: 20px; /* Ajoute un espacement entre les éléments */
-    text-align: center; /* Centre le contenu horizontalement */
+    max-width: 50%; /* Affiche deux sections par ligne */
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box; /* Inclut les marges et les bordures dans la largeur */
+    padding: 0 10px; /* Ajoute un espacement entre les sections */
   }
-  #annonces {
-    height: auto; /* Ajuste la hauteur automatiquement */
-    padding: 20px; /* Ajoute un padding pour l'espacement */
-}
-
-#annonces .cartes {
-    margin: 0; /* Supprime les marges */
-    margin-top: 20px; /* Ajoute un espace en haut */
-    display: flex; /* Utilise flexbox pour aligner les cartes */
-    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
-    justify-content: center; /* Centre les cartes horizontalement */
-    gap: 20px; /* Ajoute un espacement entre les cartes */
-}
-#annonces
-.cartes .card {
-    width: calc(50% - 20px); /* Ajuste la largeur des cartes pour deux par ligne */
-    max-width: none; /* Réinitialise la largeur maximale */
-    height: 350px;
-}
-.cartes .card-body {
-    margin-top: 10px; /* Ajuste la marge en haut */
-}
-
+  
 .cartes .card-title {
     text-align: center;
     margin-top: 0;
     font-size: 16px; /* Diminue la taille de la police */
 }
-
+.cartes .card-text{
+    font-size: 14px;
+}
 .cartes .card-foot p {
     font-size: 10px; /* Diminue la taille de la police */
 }
@@ -645,14 +642,19 @@ footer ul{
     margin-bottom: 20px; /* Ajoute un espacement entre les cartes */
 }
 #temoignage{
-    margin-bottom: 50%;
+        height: 900px;
+        
 }
 #partenaire{
-    margin-top: 50%;
+    height: 400px;
+    margin-top: 700px;
 }
-.carousel-item img {
-    height: 50px;
-    width: 50px;
-    margin: 10px;
+footer{
+    height: 860px;
+    margin-top: 0;
+}
+.newsletter input{
+    width: 150px;
+    margin-left: 50px;
 }
 }
